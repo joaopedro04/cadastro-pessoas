@@ -1,0 +1,52 @@
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    max-height: 64px;
+    min-height: 64px;
+    &__bar {
+        display: flex;
+        width: 100%;
+        height: 64px;
+        max-height: 64px;
+        min-height: 64px;
+
+        .title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 170px;
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .content-bar-desktop {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: calc(100% - 170px);
+
+            .botao-nav-bar {
+                margin: 4px 0;
+            }
+
+            @media(max-width: 375px ) {
+                display: none;
+            }
+        }
+
+        .content-bar-mobile {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: calc(100% - 170px);
+
+            @media(min-width: 376px){
+                display: none;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<div class="listar-todos" *ngIf="pessoas">
+  <h2>Pessoas</h2>
+  <div class="card-pessoas">
+    <mat-card *ngFor="let p of pessoas" class="card-pessoas__card">
+      <div mat-card-content class="card-pessoas__content">
+        <div class="id">
+          <span>Id: {{ p.id }}</span>
+        </div>
+        <div class="nome">
+          <span>Nome: {{ p.name }}</span>
+        </div>
+        <div class="email">
+          <span>Email: {{ p.email }}</span>
+        </div>
+        <div class="celular">
+          <span>Celular: {{ p.phone }}</span>
+        </div>
+        <div class="aniversario">
+          <span>Data de nascimento: {{ p.birth_at }}</span>
+        </div>
+      </div>
+      <div class="card-pessoas__actions">
+        <button mat-raised-button (click)="editar(p)">Editar</button>
+      </div>
+    </mat-card>
+  </div>
+
+
+</div>

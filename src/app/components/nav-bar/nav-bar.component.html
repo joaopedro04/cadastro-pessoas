@@ -1,0 +1,25 @@
+<p class="nav-bar">
+  <mat-toolbar class="nav-bar__bar">
+    <div class="title">
+      <span>Cadastro de Pessoas</span>
+    </div>
+    <div class="content-bar-desktop">
+      <button mat-button class="botao-nav-bar" (click)="acao('cadastrar')">Cadastrar</button>
+      <button mat-button class="botao-nav-bar" (click)="acao('lista-todos')">Lista de pessoas</button>
+    </div>
+    <div class="content-bar-mobile">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="acao('cadastrar')">
+          <span>Cadastrar</span>
+        </button>
+        <button mat-menu-item (click)="acao('lista-todos')">
+          <span>Lista de pessoas</span>
+        </button>
+      </mat-menu>
+
+    </div>
+  </mat-toolbar>
+</p>

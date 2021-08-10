@@ -1,0 +1,33 @@
+<div class="modal-editar">
+    <div  mat-dialog-title class="modal-editar__title">
+        <h2>Editar pessoa</h2>
+    </div>
+    <div mat-dialog-content class="modal-editar__content">
+      <form>
+        <mat-form-field appearance="legacy">
+          <mat-label>Nome</mat-label>
+          <input matInput placeholder="Nome" [formControl]="name" [value]="objEdit.name">
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" [formControl]="email" [value]="objEdit.email">
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Telefone</mat-label>
+          <input matInput placeholder="Telefone" [formControl]="phone" [textMask]="{mask: maskService.phoneMask}"  [value]="objEdit.phone">
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Data de nascimento</mat-label>
+          <input matInput placeholder="Data de nascimento" [formControl]="birth_at" [textMask]="{mask: maskService.dateMask}"  [value]="objEdit.birth_at">
+        </mat-form-field>
+      </form>
+    </div>
+    <div mat-dialog-actions class="modal-editar__actions">
+      <button mat-button (click)="salvarEdicao()" [disabled]="loading" *ngIf="!editou">Salvar</button>
+      <button mat-button mat-dialog-close *ngIf="editou" [disabled]="loading" (click)="fechar()">Fechar</button>
+      <button mat-button mat-dialog-close *ngIf="!editou">Fechar</button>
+    </div>
+</div>

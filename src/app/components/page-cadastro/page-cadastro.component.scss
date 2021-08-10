@@ -1,0 +1,35 @@
+.cadastrar-pessoas {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+    mat-card {
+        display: flex;
+        width: 100%;
+        max-width: 750px;
+        flex-direction: column;
+
+    }
+
+    &__title {}
+
+    &__content {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        form {
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+        }
+    }
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

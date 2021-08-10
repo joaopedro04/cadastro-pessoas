@@ -1,0 +1,33 @@
+<div class="cadastrar-pessoas">
+    <mat-card>
+        <div mat-card-title class="cadastrar-pessoas__title">
+            <h2>Cadastrar pessoa</h2>
+        </div>
+        <div mat-card-content class="cadastrar-pessoas__content">
+            <form>
+                <mat-form-field appearance="legacy">
+                  <mat-label>Nome</mat-label>
+                  <input matInput placeholder="Nome" [formControl]="name">
+                </mat-form-field>
+        
+                <mat-form-field appearance="legacy">
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="Email" [formControl]="email">
+                </mat-form-field>
+        
+                <mat-form-field appearance="legacy">
+                  <mat-label>Telefone</mat-label>
+                  <input matInput placeholder="Telefone" [formControl]="phone" [textMask]="{mask: maskService.phoneMask}">
+                </mat-form-field>
+        
+                <mat-form-field appearance="legacy">
+                  <mat-label>Data de nascimento</mat-label>
+                  <input matInput placeholder="Data de nascimento" [formControl]="birth_at" [textMask]="{mask: maskService.dateMask}" >
+                </mat-form-field>
+              </form>
+        </div>
+        <div mat-card-action class="cadastrar-pessoas__actions">
+            <button mat-button (click)="salvarPessoa()">Salvar</button>
+        </div>
+    </mat-card>
+</div>
